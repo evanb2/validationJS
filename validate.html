@@ -1,0 +1,36 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <script src="js/jquery-1.11.2.js"></script>
+        <script src="js/scripts.js"></script>
+        <title>Validate</title>
+    </head>
+    <body>
+        <h3>Three Inputs to Validate</h3>
+        <div class="container">
+            <form id="validate">
+                <div class="form-group">
+                    <input id="email" type="text" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <label for="number">Number: </label>
+                    <input id="number" type="number" name="number" required>
+                </div>
+                <div class="form-group">
+                    <input id="name" type="text" name="name" placeholder="Name" required>
+                </div>
+                <button type="submit">Validate!</button>
+            </form>
+
+            <div id="result_one">
+                <p>Email: <span class="email_result"></span></p>
+            </div>
+            <div id="result_two">
+                <p>Number: <span class="number_result"></span></p>
+            </div>
+            <div id="result_three">
+                <p>Name: <span class="name_result"></span></p>
+            </div>
+        </div>
+    </body>
+</html>
