@@ -36,13 +36,17 @@ function processResponse() {
     if(http.readyState == 4){
 
         // DO THE JAVASCRIPT THANG
-        alert(http.responseText);
+        alert("Success");
+        // $("#lyrics").show();
+        // setTimeout(function() { $("#lyrics").hide(); }, 5000);
+    } else {
+        alert("Failure");
     }
 }
 
 var validateEmail = function(input) {
     var $email = $('form input[name="email');
-    var re = /[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/igm;
+    var re = "/[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/igm";
     if ($email.val() == '' || !re.test($email.val())) {
         alert('Please enter a valid email address.');
         return false;
@@ -71,7 +75,7 @@ var validateName = function(input) {
 };
 
 $(document).ready(function() {
-    $(".lyrics").hide();
+    // $(".lyrics").hide();
     $("form#validate").submit(function(event) {
 
         var email = $("input#email").val();
@@ -92,8 +96,8 @@ $(document).ready(function() {
         }
 
         //display lyrics
-        $(".lyrics").show();
-        setTimeout(function() { $(".lyrics").hide(); }, 5000);
+        // $("#lyrics").show();
+        setTimeout(function() { $("#lyrics").hide(); }, 5000);
         //display js validation
         $(".email_result").text(email_result);
         $(".number_result").text(number_result);

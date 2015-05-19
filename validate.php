@@ -31,7 +31,7 @@ $result_number = validateNumber($number);
 if ($result_number && $result_name && $result_email)
 {
     # return JSON object with favorite song.
-    echo json_encode("Success");
+    echo '<p id="lyrics">' . json_encode("Been a long time, in a low place/Surrounded by what I have made/Need to get away/Get away from what relates/And what was done…/Cuz it’s all over now/Through the woods, I come running to loose leaf/And carve my name/In the lines, there’s not a trace/I hear the ghost whisper, and those old eyes watching me/But I feel safe…/Grandfather looking over me") . '</p>';
 }
 else
 {
@@ -68,22 +68,6 @@ else
                 <div id="result_three">
                     <p>Name: <span class="name_result"></span></p>
                 </div>
-                <p><span class="lyrics">"A Song For Our Grandfathers" :
-
-                                        Been a long time, in a low place
-                                        Surrounded by what I have made
-                                        Need to get away
-                                        Get away from what relates
-                                        And what was done…
-
-                                        Cuz it’s all over now
-
-                                        Through the woods, I come running to loose leaf
-                                        And carve my name
-                                        In the lines, there’s not a trace
-                                        I hear the ghost whisper, and those old eyes watching me
-                                        But I feel safe…
-                                        Grandfather looking over me</span></p>
             </div>
         </body>
     </html>';
