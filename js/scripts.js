@@ -20,8 +20,7 @@ function createRequestObject() {
 var http = createRequestObject();
 
 function makeGetRequest(name, email, number) {
-    //make a connection to the server ... specifying that you intend to make a GET request
-    //to the server. Specifiy the page name and the URL parameters to send
+    //make a connection to the server
     var url = 'http://localhost:8888/validate.php?name=' + name + '&email=' + email + '&number=' + number;
     http.open('get', url);
 
@@ -37,7 +36,7 @@ function processResponse() {
     if(http.readyState == 4){
 
         // DO THE JAVASCRIPT THANG
-        // alert(http.responseText);
+        alert(http.responseText);
     }
 }
 
@@ -83,24 +82,23 @@ $(document).ready(function() {
         var number_result = validateNumber(number);
         var name_result = validateName(name);
 
-
         if (email_result && number_result && name_result)
         {
             // send AJAX
             makeGetRequest(name, email, number);
         }
         else {
-            console.log("invalid");
+            alert("invalid");
         }
 
+        //display lyrics
         $(".lyrics").show();
         setTimeout(function() { $(".lyrics").hide(); }, 5000);
-
-
+        //display js validation
         $(".email_result").text(email_result);
         $(".number_result").text(number_result);
         $(".name_result").text(name_result);
-
+        //reset inputs
         $("input#email").val("");
         $("input#number").val("");
         $("input#name").val("");

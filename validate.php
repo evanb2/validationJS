@@ -31,7 +31,7 @@ $result_number = validateNumber($number);
 if ($result_number && $result_name && $result_email)
 {
     # return JSON object with favorite song.
-    echo json_encode("That best song, of course.");
+    echo json_encode("Success");
 }
 else
 {
@@ -68,7 +68,7 @@ else
                 <div id="result_three">
                     <p>Name: <span class="name_result"></span></p>
                 </div>
-                <p><span class="lyrics">"A Song For Our Grandfathers" : 
+                <p><span class="lyrics">"A Song For Our Grandfathers" :
 
                                         Been a long time, in a low place
                                         Surrounded by what I have made
